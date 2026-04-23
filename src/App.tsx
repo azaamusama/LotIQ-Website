@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { 
   Shield, 
   Eye, 
@@ -20,8 +20,9 @@ import {
   Play
 } from "lucide-react";
 import { useState } from "react";
+import { EnrollmentWizard } from "./EnrollmentWizard";
 
-const Navbar = () => {
+const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,7 +40,10 @@ const Navbar = () => {
             <a href="#use-cases" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Use Cases</a>
             <a href="#features" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Features</a>
             <a href="#how-it-works" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">How it Works</a>
-            <button className="bg-primary text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-blue-600 transition-all shadow-sm">
+            <button 
+              onClick={onEnroll}
+              className="bg-primary text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-blue-600 transition-all shadow-sm"
+            >
               Enroll your property
             </button>
           </div>
@@ -62,7 +66,10 @@ const Navbar = () => {
           <a href="#use-cases" className="block text-base font-medium text-slate-600" onClick={() => setIsOpen(false)}>Use Cases</a>
           <a href="#features" className="block text-base font-medium text-slate-600" onClick={() => setIsOpen(false)}>Features</a>
           <a href="#how-it-works" className="block text-base font-medium text-slate-600" onClick={() => setIsOpen(false)}>How it Works</a>
-          <button className="w-full bg-primary text-white px-5 py-3 rounded-xl text-base font-semibold">
+          <button 
+            onClick={() => { onEnroll(); setIsOpen(false); }}
+            className="w-full bg-primary text-white px-5 py-3 rounded-xl text-base font-semibold"
+          >
             Enroll your property
           </button>
         </motion.div>
@@ -182,9 +189,11 @@ const UseCaseCard = ({ title, description, icon: Icon, image, reverse = false })
 );
 
 export default function App() {
+  const [isWizardOpen, setIsWizardOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar onEnroll={() => setIsWizardOpen(true)} />
 
       <main>
         {/* Section 1: Hero */}
@@ -207,7 +216,10 @@ export default function App() {
                   No manual oversight. No guesswork. Just real-time visibility and automated enforcement across your property.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                  <button className="bg-primary text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-600 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group">
+                  <button 
+                    onClick={() => setIsWizardOpen(true)}
+                    className="bg-primary text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-600 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group"
+                  >
                     Enroll your property
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -360,7 +372,10 @@ export default function App() {
               Start running a self-managing property. Join the private beta and experience automated property intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-blue-600 transition-all shadow-xl shadow-primary/20">
+              <button 
+                onClick={() => setIsWizardOpen(true)}
+                className="bg-primary text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-blue-600 transition-all shadow-xl shadow-primary/20"
+              >
                 Sign up
               </button>
               <button className="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl text-xl font-bold hover:bg-slate-50 transition-all">
@@ -370,6 +385,12 @@ export default function App() {
           </div>
         </section>
       </main>
+
+      <AnimatePresence>
+        {isWizardOpen && (
+          <EnrollmentWizard onClose={() => setIsWizardOpen(false)} />
+        )}
+      </AnimatePresence>
 
       {/* Section 8: Footer */}
       <footer className="bg-slate-50 border-t border-slate-200 py-20">
