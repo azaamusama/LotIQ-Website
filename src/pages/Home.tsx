@@ -278,29 +278,6 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
         </div>
       </section>
 
-      {/* Section 6: Core Benefit Strip */}
-      <section className="py-24 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-16">From reactive management to continuous control</h2>
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
-            {[
-              'Eliminate manual patrols',
-              'Reduce liability and fraud',
-              'Enforce rules consistently',
-              'Gain real-time visibility',
-              'Operate without on-site staff'
-            ].map((point, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <span className="font-semibold">{point}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Section 7: Final CTA */}
       <section className="py-24 lg:py-32 bg-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
