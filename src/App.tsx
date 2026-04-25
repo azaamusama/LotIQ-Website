@@ -76,9 +76,8 @@ export default function App() {
               <div>
                 <h4 className="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Product</h4>
                 <ul className="space-y-4">
-                  {['Features', 'Pricing', 'Case Studies'].map((item) => (
-                    <li key={item}><a href="#" className="text-sm text-slate-500 hover:text-primary transition-colors">{item}</a></li>
-                  ))}
+                  <li><a href="/#pricing" className="text-sm text-slate-500 hover:text-primary transition-colors">Pricing</a></li>
+                  <li><a href="/#use-cases" className="text-sm text-slate-500 hover:text-primary transition-colors">Use Cases</a></li>
                 </ul>
               </div>
               <div>

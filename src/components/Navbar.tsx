@@ -37,7 +37,7 @@ export const Navbar = ({ onEnroll }: NavbarProps) => {
               About
             </Link>
             <a href="/#use-cases" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Use Cases</a>
-            <a href="/#features" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Features</a>
+            <a href="/#pricing" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Pricing</a>
             <a href="/#how-it-works" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">How it Works</a>
             <button 
               onClick={onEnroll}
@@ -70,7 +70,7 @@ export const Navbar = ({ onEnroll }: NavbarProps) => {
             About
           </Link>
           <a href="/#use-cases" className="block text-base font-medium text-slate-600" onClick={() => setIsOpen(false)}>Use Cases</a>
-          <a href="/#features" className="block text-base font-medium text-slate-600" onClick={() => setIsOpen(false)}>Features</a>
+          <a href="/#pricing" className="block text-base font-medium text-slate-600" onClick={() => setIsOpen(false)}>Pricing</a>
           <a href="/#how-it-works" className="block text-base font-medium text-slate-600" onClick={() => setIsOpen(false)}>How it Works</a>
           <button 
             onClick={() => { onEnroll(); setIsOpen(false); }}
