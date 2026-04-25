@@ -278,24 +278,106 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
         </div>
       </section>
 
-      {/* Section 7: Final CTA */}
-      <section className="py-24 lg:py-32 bg-white text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl lg:text-7xl font-bold text-slate-900 mb-6 tracking-tight">Stop reacting to problems.</h2>
-          <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Start running a self-managing property. Join the private beta and experience automated property intelligence.
-          </p>
-          <div className="flex justify-center">
-            <button 
-              onClick={onEnroll}
-              className="bg-primary text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-blue-600 transition-all shadow-xl shadow-primary/20 flex items-center gap-3 group"
+      {/* Section 6: Pricing */}
+      <section id="pricing" className="py-24 lg:py-36 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 skew-x-[-12deg] translate-x-1/4 -z-10" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 lg:mb-24">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight"
             >
-              Enroll your property
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </button>
+              Automate your property.<br />Reduce your costs.
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-xl text-slate-500 max-w-2xl mx-auto"
+            >
+              A fully managed intelligence service. No hardware to buy. No manual patrols to manage.
+            </motion.p>
+          </div>
+
+          <div className="max-w-xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-[40px] border border-slate-100 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.08)] p-8 lg:p-12 relative"
+            >
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg shadow-primary/20">
+                Fully Managed
+              </div>
+
+              <div className="text-center mb-10">
+                <div className="text-slate-500 font-medium mb-2">Starting at</div>
+                <div className="flex items-baseline justify-center gap-2">
+                  <span className="text-6xl font-bold text-slate-900 tracking-tight">$149</span>
+                  <div className="text-left">
+                    <div className="text-slate-900 font-bold leading-none">/ month</div>
+                    <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-1">per property</div>
+                  </div>
+                </div>
+                <p className="text-[11px] text-slate-400 font-bold uppercase tracking-widest mt-6">
+                  + one-time installation fee
+                </p>
+              </div>
+
+              <div className="space-y-5 mb-10">
+                {[
+                  '24/7 AI monitoring',
+                  'Automated parking enforcement',
+                  'Slip & fall detection',
+                  'Snow & service verification',
+                  'Evidence-backed reporting',
+                  'Hardware + installation included'
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-4 group">
+                    <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-primary group-hover:text-white transition-colors" />
+                    </div>
+                    <span className="text-slate-700 font-medium">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button 
+                onClick={onEnroll}
+                className="w-full bg-primary text-white py-6 rounded-2xl text-lg font-bold shadow-xl shadow-primary/25 hover:bg-blue-600 active:scale-[0.98] transition-all flex items-center justify-center gap-3 group"
+              >
+                Request Property Assessment
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+
+              <div className="mt-8 pt-8 border-t border-slate-50 flex flex-col items-center gap-4 text-center">
+                <div className="flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-full">
+                  <Zap className="w-4 h-4 text-primary" />
+                  <span className="text-xs font-bold text-slate-600 uppercase tracking-tight">No hardware costs. Fully managed.</span>
+                </div>
+                <p className="text-sm font-medium text-slate-400">
+                  Up to <span className="text-primary font-bold">10x cheaper</span> than on-site staff
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="mt-12 text-center text-sm font-bold text-slate-300 uppercase tracking-[0.3em]"
+            >
+              Currently operating across Massachusetts
+            </motion.p>
           </div>
         </div>
       </section>
+
     </>
   );
 };
