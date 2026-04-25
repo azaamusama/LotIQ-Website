@@ -11,7 +11,10 @@ import { Zap } from "lucide-react";
 import { Navbar } from "./components/Navbar";
 import { HomePage } from "./pages/Home";
 import { AboutPage } from "./pages/About";
-import { EnrollmentWizard } from "./EnrollmentWizard";
+import { PrivacyPolicyPage } from "./pages/Privacy";
+import { TermsPage } from "./pages/Terms";
+import { ContactForm } from "./ContactForm";
+import { Link } from "react-router-dom";
 
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
@@ -32,24 +35,26 @@ const ScrollToTop = () => {
 };
 
 export default function App() {
-  const [isWizardOpen, setIsWizardOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
     <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen">
-        <Navbar onEnroll={() => setIsWizardOpen(true)} />
+        <Navbar onEnroll={() => setIsFormOpen(true)} />
 
         <main>
           <Routes>
-            <Route path="/" element={<HomePage onEnroll={() => setIsWizardOpen(true)} />} />
-            <Route path="/about" element={<AboutPage onEnroll={() => setIsWizardOpen(true)} />} />
+            <Route path="/" element={<HomePage onEnroll={() => setIsFormOpen(true)} />} />
+            <Route path="/about" element={<AboutPage onEnroll={() => setIsFormOpen(true)} />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
           </Routes>
         </main>
 
         <AnimatePresence>
-          {isWizardOpen && (
-            <EnrollmentWizard onClose={() => setIsWizardOpen(false)} />
+          {isFormOpen && (
+            <ContactForm onClose={() => setIsFormOpen(false)} />
           )}
         </AnimatePresence>
 
@@ -79,25 +84,38 @@ export default function App() {
               <div>
                 <h4 className="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Company</h4>
                 <ul className="space-y-4">
-                  {['About', 'Contact', 'Privacy Policy', 'Terms of Service'].map((item) => (
-                    <li key={item}><a href="#" className="text-sm text-slate-500 hover:text-primary transition-colors">{item}</a></li>
-                  ))}
+                  <li><Link to="/about" className="text-sm text-slate-500 hover:text-primary transition-colors">About</Link></li>
+                  <li><Link to="/privacy" className="text-sm text-slate-500 hover:text-primary transition-colors">Privacy Policy</Link></li>
+                  <li><Link to="/terms" className="text-sm text-slate-500 hover:text-primary transition-colors">Terms of Service</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Connect</h4>
                 <ul className="space-y-4">
-                  {['LinkedIn', 'Twitter', 'Instagram'].map((item) => (
-                    <li key={item}><a href="#" className="text-sm text-slate-500 hover:text-primary transition-colors">{item}</a></li>
-                  ))}
+                  <li>
+                    <a 
+                      href="https://www.linkedin.com/company/lotiq-inc/" 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="text-sm text-slate-500 hover:text-primary transition-colors"
+                    >
+                      LinkedIn
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
             <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-xs text-slate-400">© 2026 LotIQ. All rights reserved.</p>
               <div className="flex gap-8 text-xs text-slate-400">
-                 <a href="#" className="hover:text-primary transition-colors">Twitter</a>
-                 <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
+                 <a 
+                   href="https://www.linkedin.com/company/lotiq-inc/" 
+                   target="_blank" 
+                   rel="noreferrer" 
+                   className="hover:text-primary transition-colors"
+                 >
+                   LinkedIn
+                 </a>
               </div>
             </div>
           </div>

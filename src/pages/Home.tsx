@@ -134,7 +134,7 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
   return (
     <>
       {/* Section 1: Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 overflow-hidden bg-slate-50">
+      <section className="relative pt-32 pb-20 lg:pt-32 lg:pb-24 overflow-hidden bg-slate-50">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_45%_at_50%_40%,#0088FF0a,transparent)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -195,14 +195,14 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
               title="Risk & Liability"
               description="Detect slip-and-fall incidents and hazardous conditions in real time. Every event is backed by time-stamped video to reduce disputes and fraud."
               icon={Shield}
-              image="https://images.unsplash.com/photo-1541888941259-773a9417d741?auto=format&fit=crop&q=80&w=1200"
+              image="https://images.pexels.com/photos/35861604/pexels-photo-35861604.jpeg?_gl=1*1ut9fdu*_ga*MjgwNTU0ODU2LjE3NzcxMTI2NjU.*_ga_8JE65Q40S6*czE3NzcxMTI2NjQkbzEkZzEkdDE3NzcxMTM0NDMkajI4JGwwJGgw"
               reverse
             />
             <UseCaseCard 
               title="Service Monitoring"
               description="Verify snow ploughing, salting, and vendor activity as it happens. No more relying on invoices without proof."
               icon={Snowflake}
-              image="https://images.unsplash.com/photo-1482406632939-1a7d6a1681f2?auto=format&fit=crop&q=80&w=1200"
+              image="https://images.pexels.com/photos/35030432/pexels-photo-35030432.jpeg?_gl=1*11hxaiw*_ga*MjgwNTU0ODU2LjE3NzcxMTI2NjU.*_ga_8JE65Q40S6*czE3NzcxMTI2NjQkbzEkZzEkdDE3NzcxMTM2MDEkajIzJGwwJGgw"
             />
             <UseCaseCard 
               title="Property Operations"
@@ -308,15 +308,13 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
           <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
             Start running a self-managing property. Join the private beta and experience automated property intelligence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <button 
               onClick={onEnroll}
-              className="bg-primary text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-blue-600 transition-all shadow-xl shadow-primary/20"
+              className="bg-primary text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-blue-600 transition-all shadow-xl shadow-primary/20 flex items-center gap-3 group"
             >
-              Sign up
-            </button>
-            <button className="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl text-xl font-bold hover:bg-slate-50 transition-all">
-              Contact sales
+              Enroll your property
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>
