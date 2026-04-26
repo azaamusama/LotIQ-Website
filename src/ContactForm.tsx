@@ -65,7 +65,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
               </div>
 
               <div className="space-y-6">
-                <TrustItem icon={ShieldCheck} text="No commitment required" isVertical />
+                <TrustItem icon={ShieldCheck} text="1 year commitment" isVertical />
                 <TrustItem icon={Wrench} text="Setup handled by LotIQ" isVertical />
                 <TrustItem icon={Clock2} text="No hardware management" isVertical />
               </div>
@@ -156,7 +156,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
 
             {/* Mobile Trust Line */}
             <div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-3 gap-2 lg:hidden">
-              <TrustItem icon={ShieldCheck} text="No commitment" />
+              <TrustItem icon={ShieldCheck} text="1yr commitment" />
               <TrustItem icon={Wrench} text="Full setup" />
               <TrustItem icon={Clock2} text="No hardware" />
             </div>
