@@ -109,24 +109,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Quick Answers Section */}
-            <div className="mt-16 pt-12 border-t border-slate-200">
-              <h4 className="font-bold text-slate-900 mb-8 uppercase text-xs tracking-widest text-center">Quick answers</h4>
-              <div className="grid sm:grid-cols-3 gap-8">
-                <div className="text-center sm:text-left">
-                  <p className="text-sm font-bold text-slate-900 mb-2">What is LotIQ?</p>
-                  <p className="text-sm text-slate-500">AI-powered property monitoring and enforcement.</p>
-                </div>
-                <div className="text-center sm:text-left">
-                  <p className="text-sm font-bold text-slate-900 mb-2">Do I need to install anything?</p>
-                  <p className="text-sm text-slate-500">No, LotIQ handles everything.</p>
-                </div>
-                <div className="text-center sm:text-left">
-                  <p className="text-sm font-bold text-slate-900 mb-2">Where is LotIQ available?</p>
-                  <p className="text-sm text-slate-500">Currently operating in Massachusetts.</p>
-                </div>
-              </div>
-            </div>
             <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-xs text-slate-400">© 2026 LotIQ. All rights reserved.</p>
               <div className="flex gap-8 text-xs text-slate-400">
