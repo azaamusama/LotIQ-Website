@@ -4,6 +4,7 @@
  */
 
 import { motion } from "motion/react";
+import { toast } from "react-hot-toast";
 import { 
   X, 
   User, 
@@ -63,7 +64,6 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
               </div>
 
               <div className="space-y-6">
-                <TrustItem icon={ShieldCheck} text="1 year commitment" isVertical />
                 <TrustItem icon={Wrench} text="Setup handled by LotIQ" isVertical />
                 <TrustItem icon={Clock2} text="No hardware management" isVertical />
               </div>
@@ -87,7 +87,11 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
               </div>
             </div>
 
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              toast.success("Enrollment request sent successfully! We'll get back to you shortly.");
+              setTimeout(() => onClose(), 1500);
+            }}>
               <div className="grid sm:grid-cols-2 gap-6">
                 <InputGroup label="Full Name" placeholder="John Smith" icon={User} />
                 <InputGroup label="Work Email" type="email" placeholder="john@company.com" icon={Mail} />
@@ -153,8 +157,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
             </form>
 
             {/* Mobile Trust Line */}
-            <div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-3 gap-2 lg:hidden">
-              <TrustItem icon={ShieldCheck} text="1yr commitment" />
+            <div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-2 gap-2 lg:hidden">
               <TrustItem icon={Wrench} text="Full setup" />
               <TrustItem icon={Clock2} text="No hardware" />
             </div>

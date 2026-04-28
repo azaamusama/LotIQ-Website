@@ -6,6 +6,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "motion/react";
+import { Toaster } from "react-hot-toast";
 
 import { Navbar } from "./components/Navbar";
 import { Logo } from "./components/Logo";
@@ -40,6 +41,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <Toaster position="top-center" reverseOrder={false} />
       <ScrollToTop />
       <div className="min-h-screen">
         <Navbar onEnroll={() => setIsFormOpen(true)} />

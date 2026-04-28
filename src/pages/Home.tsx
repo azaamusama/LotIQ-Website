@@ -317,23 +317,21 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
               {
                 title: "Small Property",
                 subtitle: "2–3 Cameras",
-                price: "$299–$339",
+                price: "$299–$339*",
                 install: "$200–$250",
                 desc: "Ideal for smaller lots and pilot deployments."
               },
               {
                 title: "Medium Property",
                 subtitle: "4–6 Cameras",
-                price: "$379–$449",
+                price: "$379–$449*",
                 install: "$300–$400",
-                desc: "Best for growing commercial properties with higher activity.",
-                emphasized: true,
-                badge: "Recommended"
+                desc: "Best for growing commercial properties with higher activity."
               },
               {
                 title: "Large Property",
                 subtitle: "7–8 Cameras",
-                price: "$474–$499",
+                price: "$474–$499*",
                 install: "$450–$550",
                 desc: "Designed for high-traffic properties and multi-zone coverage."
               }
@@ -344,13 +342,8 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`group relative bg-white rounded-[40px] border ${plan.emphasized ? 'border-primary shadow-[0_32px_64px_-16px_rgba(60,131,246,0.15)] scale-105 z-10' : 'border-slate-100 shadow-xl shadow-slate-200/50'} p-8 lg:p-10 transition-all hover:translate-y-[-4px] overflow-hidden`}
+                className="group relative bg-white rounded-[40px] border border-slate-100 shadow-xl shadow-slate-200/50 p-8 lg:p-10 transition-all hover:translate-y-[-4px] overflow-hidden"
               >
-                {plan.badge && (
-                  <div className="absolute top-6 right-8 bg-primary text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                    {plan.badge}
-                  </div>
-                )}
                 
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-1">{plan.title}</h3>
@@ -362,7 +355,6 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Monthly</p>
                     <div className="flex items-baseline gap-1">
                       <span className="text-4xl font-bold text-slate-900">{plan.price}</span>
-                      <span className="text-slate-500 font-medium text-sm">/ mo</span>
                     </div>
                   </div>
                   <div>
@@ -406,8 +398,8 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
                   Enroll your property
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <p className="mt-6 text-sm font-medium text-slate-400">
-                  Most properties go live within <span className="text-primary font-bold">7–14 days.</span>
+                <p className="mt-4 text-xs font-medium text-slate-400">
+                  * Monthly fees are plus sales tax where applicable.
                 </p>
               </div>
             </div>
