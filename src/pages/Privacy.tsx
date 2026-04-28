@@ -17,7 +17,8 @@ import {
   Share2, 
   UserPlus, 
   RefreshCcw,
-  Scale
+  Scale,
+  Download
 } from "lucide-react";
 
 interface AccordionProps {
@@ -84,9 +85,9 @@ const HighlightBox = ({ title, children }: { title?: string; children: React.Rea
 
 export const PrivacyPolicyPage = () => {
   return (
-    <div className="pt-24 pb-20 bg-white min-h-screen">
+    <div className="pt-20 pb-12 bg-white min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="py-20 lg:py-32 overflow-hidden border-b border-slate-50">
+      <section className="py-12 lg:py-20 overflow-hidden border-b border-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -96,8 +97,15 @@ export const PrivacyPolicyPage = () => {
             <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-none tracking-tight mb-6">
               Privacy Policy
             </h1>
-            <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">
-              Effective May 1, 2026
+            <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8 flex items-center justify-center gap-8 relative">
+              <span>Effective May 1, 2026</span>
+              <button 
+                onClick={() => window.print()}
+                className="flex items-center gap-2 text-primary hover:text-blue-600 transition-colors print:hidden"
+              >
+                <Download className="w-4 h-4" />
+                Download PDF
+              </button>
             </p>
             <div className="max-w-2xl mx-auto">
               <p className="text-xl text-slate-500 leading-relaxed">
@@ -109,7 +117,7 @@ export const PrivacyPolicyPage = () => {
       </section>
 
       {/* 2. QUICK SUMMARY */}
-      <section className="py-20 bg-slate-50/50">
+      <section className="py-12 bg-slate-50/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-10">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] text-center">Key things to know</h2>
@@ -135,7 +143,7 @@ export const PrivacyPolicyPage = () => {
       </section>
 
       {/* DETAILED SECTIONS */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             <Accordion title="Service provider role" icon={Info}>

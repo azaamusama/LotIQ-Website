@@ -181,9 +181,9 @@ export const FAQ = () => {
   })).filter(section => section.items.length > 0);
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-32 pb-24">
+    <div className="bg-slate-50 min-h-screen pt-20 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -201,7 +201,7 @@ export const FAQ = () => {
           </motion.p>
         </div>
 
-        <div className="mb-16 relative">
+        <div className="mb-12 relative">
           <div className="relative">
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
             <input
@@ -231,7 +231,7 @@ export const FAQ = () => {
           )}
         </div>
 
-        <div className="mt-24 text-center">
+        <div className="mt-16 text-center">
           <div className="bg-primary text-white p-12 rounded-[40px] shadow-2xl shadow-primary/20">
             <h2 className="text-3xl font-bold mb-4">Still have questions?</h2>
             <p className="text-white/80 mb-10 max-w-lg mx-auto">

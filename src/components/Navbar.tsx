@@ -5,8 +5,9 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Zap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { Logo } from "./Logo";
 
 interface NavbarProps {
   onEnroll: () => void;
@@ -19,14 +20,11 @@ export const Navbar = ({ onEnroll }: NavbarProps) => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav print:hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <Zap className="text-white w-5 h-5 fill-current" />
-            </div>
-            <span className="text-xl font-bold tracking-tight text-slate-900">LotIQ</span>
+          <Link to="/" className="flex items-center">
+            <Logo showSubtitle />
           </Link>
           
           <div className="hidden md:flex items-center gap-8">

@@ -12,9 +12,9 @@ interface AboutPageProps {
 
 export const AboutPage = ({ onEnroll }: AboutPageProps) => {
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-20 pb-12">
       {/* 1. HERO SECTION */}
-      <section className="relative py-20 lg:py-16 overflow-hidden">
+      <section className="relative py-12 lg:py-8 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <motion.h1 
@@ -45,7 +45,7 @@ export const AboutPage = ({ onEnroll }: AboutPageProps) => {
       </section>
 
       {/* 2. WHAT LOTIQ IS */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em]">What is LotIQ</h2>
@@ -62,7 +62,7 @@ export const AboutPage = ({ onEnroll }: AboutPageProps) => {
       </section>
 
       {/* 3. OUR STORY */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em]">Our story</h2>
@@ -96,7 +96,7 @@ export const AboutPage = ({ onEnroll }: AboutPageProps) => {
       </div>
 
       {/* 4. WHAT WE DO */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em]">What we do</h2>
@@ -138,7 +138,7 @@ export const AboutPage = ({ onEnroll }: AboutPageProps) => {
       </section>
 
       {/* 5. HOW IT WORKS */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-6 order-2 lg:order-1">
@@ -162,7 +162,7 @@ export const AboutPage = ({ onEnroll }: AboutPageProps) => {
       </section>
 
       {/* 6. WHY IT MATTERS */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em]">Why it matters</h2>
@@ -197,7 +197,7 @@ export const AboutPage = ({ onEnroll }: AboutPageProps) => {
       </section>
 
       {/* 7. OUR VISION */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-16 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/10 blur-[120px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -215,7 +215,7 @@ export const AboutPage = ({ onEnroll }: AboutPageProps) => {
       </section>
 
       {/* 8. CLOSING CTA */}
-      <section className="py-24 lg:py-40 text-center">
+      <section className="py-16 lg:py-24 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl lg:text-7xl font-bold text-slate-900 mb-8 tracking-tight">The future of property management is autonomous</h2>
           <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">

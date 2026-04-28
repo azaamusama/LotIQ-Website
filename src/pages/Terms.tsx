@@ -5,7 +5,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ChevronDown, Shield, Scale, Info, Building, Truck, UserCheck, AlertCircle } from "lucide-react";
+import { ChevronDown, Shield, Scale, Info, Building, Truck, UserCheck, AlertCircle, Download } from "lucide-react";
 
 interface AccordionProps {
   title: string;
@@ -71,9 +71,9 @@ const HighlightBox = ({ title, children }: { title: string; children: React.Reac
 
 export const TermsPage = () => {
   return (
-    <div className="pt-24 pb-20 bg-white min-h-screen">
+    <div className="pt-20 pb-12 bg-white min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="py-20 lg:py-32 overflow-hidden border-b border-slate-50">
+      <section className="py-12 lg:py-20 overflow-hidden border-b border-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -83,8 +83,15 @@ export const TermsPage = () => {
             <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-none tracking-tight mb-6">
               Terms of Service
             </h1>
-            <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">
-              Last updated: May 1, 2026
+            <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8 flex items-center justify-between">
+              <span>Last updated: May 1, 2026</span>
+              <button 
+                onClick={() => window.print()}
+                className="flex items-center gap-2 text-primary hover:text-blue-600 transition-colors print:hidden"
+              >
+                <Download className="w-4 h-4" />
+                Download PDF
+              </button>
             </p>
             <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100">
               <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -96,7 +103,7 @@ export const TermsPage = () => {
       </section>
 
       {/* 2. QUICK SUMMARY */}
-      <section className="py-20 bg-slate-50/50">
+      <section className="py-12 bg-slate-50/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-8">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em]">Key things to know</h2>
@@ -121,14 +128,14 @@ export const TermsPage = () => {
       </section>
 
       {/* 3. STRUCTURE OVERVIEW */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">How these terms are organized</h2>
             <p className="text-slate-500">We've broken our terms into clear parts based on how you interact with the platform.</p>
           </div>
           
-          <div className="grid sm:grid-cols-2 gap-4 mb-24">
+          <div className="grid sm:grid-cols-2 gap-4 mb-16">
             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col gap-2">
               <span className="text-[10px] font-bold text-slate-400 uppercase">Part A</span>
               <p className="text-sm font-bold text-slate-900">General terms (applies to all users)</p>
@@ -273,7 +280,7 @@ export const TermsPage = () => {
               <p>All disputes must be handled with property owners or towing companies—not LotIQ.</p>
             </Accordion>
 
-            <div className="pt-20 pb-8 border-t border-slate-100 mt-20">
+            <div className="pt-12 pb-6 border-t border-slate-100 mt-12">
               <h2 className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-12">Final Sections</h2>
               <div className="grid gap-12">
                 <div>
