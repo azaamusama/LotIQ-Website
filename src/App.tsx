@@ -16,6 +16,7 @@ import { PrivacyPolicyPage } from "./pages/Privacy";
 import { TermsPage } from "./pages/Terms";
 import { FAQ } from "./pages/FAQ";
 import { ContactForm } from "./ContactForm";
+import { ContactUsModal } from "./components/ContactUsModal";
 import { Link } from "react-router-dom";
 
 const ScrollToTop = () => {
@@ -38,6 +39,7 @@ const ScrollToTop = () => {
 
 export default function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
     <BrowserRouter>
@@ -59,6 +61,9 @@ export default function App() {
         <AnimatePresence>
           {isFormOpen && (
             <ContactForm onClose={() => setIsFormOpen(false)} />
+          )}
+          {isContactOpen && (
+            <ContactUsModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
           )}
         </AnimatePresence>
 
@@ -98,7 +103,7 @@ export default function App() {
               <div>
                 <h4 className="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Support</h4>
                 <ul className="space-y-4">
-                  <li><button onClick={() => setIsFormOpen(true)} className="text-sm text-slate-500 hover:text-primary transition-colors">Contact</button></li>
+                  <li><button onClick={() => setIsContactOpen(true)} className="text-sm text-slate-500 hover:text-primary transition-colors">Contact</button></li>
                   <li><Link to="/faq" className="text-sm text-slate-500 hover:text-primary transition-colors">FAQs</Link></li>
                   <li><Link to="/privacy" className="text-sm text-slate-500 hover:text-primary transition-colors">Privacy Policy</Link></li>
                   <li><Link to="/terms" className="text-sm text-slate-500 hover:text-primary transition-colors">Terms of Service</Link></li>

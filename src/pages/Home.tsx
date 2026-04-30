@@ -134,7 +134,7 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
   return (
     <>
       {/* Section 1: Hero */}
-      <section className="relative pt-20 pb-14 lg:pt-24 lg:pb-18 overflow-hidden bg-slate-50">
+      <section className="relative pt-20 pb-10 lg:pt-24 lg:pb-14 overflow-hidden bg-slate-50">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_45%_at_50%_40%,#0088FF0a,transparent)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -152,7 +152,7 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
               <p className="text-lg text-slate-500 mb-10 leading-relaxed max-w-xl">
                 No manual oversight. No guesswork. Just real-time visibility and automated enforcement across your property.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button 
                   onClick={onEnroll}
                   className="bg-primary text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-600 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group"
