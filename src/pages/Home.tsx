@@ -317,21 +317,21 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
               {
                 title: "Small Property",
                 subtitle: "2–3 Cameras",
-                price: "$299–$339*",
+                price: "$299–$339",
                 install: "$200–$250",
                 desc: "Ideal for smaller lots and pilot deployments."
               },
               {
                 title: "Medium Property",
                 subtitle: "4–6 Cameras",
-                price: "$379–$449*",
+                price: "$379–$449",
                 install: "$300–$400",
                 desc: "Best for growing commercial properties with higher activity."
               },
               {
                 title: "Large Property",
                 subtitle: "7–8 Cameras",
-                price: "$474–$499*",
+                price: "$474–$499",
                 install: "$450–$550",
                 desc: "Designed for high-traffic properties and multi-zone coverage."
               }
@@ -353,8 +353,9 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
                 <div className="bg-blue-50/50 rounded-3xl p-8 mb-8 border border-blue-100/20">
                   <div className="mb-6">
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Monthly</p>
-                    <div className="flex items-baseline gap-1">
+                    <div className="flex items-start gap-0.5">
                       <span className="text-4xl font-bold text-slate-900">{plan.price}</span>
+                      <span className="text-lg font-bold text-slate-300 select-none mt-1">*</span>
                     </div>
                   </div>
                   <div>

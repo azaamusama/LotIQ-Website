@@ -59,7 +59,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
               <div className="bg-blue-100/50 border border-blue-200/50 rounded-2xl p-5 mb-10 flex items-start gap-4">
                 <AlertCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <p className="text-xs text-blue-900 font-bold leading-relaxed uppercase tracking-wide">
-                Currently available in Massachusetts, coming soon to the rest of United States.
+                Currently available in Massachusetts, coming soon to rest of the United States.
                 </p>
               </div>
 
