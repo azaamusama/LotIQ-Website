@@ -15,7 +15,7 @@ const FAQAccordionItem: React.FC<FAQItemProps> = ({ question, answer }) => {
     <div className="border-b border-slate-100 last:border-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 flex items-center justify-between text-left group"
+        className="w-full py-5 flex items-center justify-between text-left group"
       >
         <span className="text-lg font-semibold text-slate-900 group-hover:text-primary transition-colors pr-8">
           {question}
@@ -33,7 +33,7 @@ const FAQAccordionItem: React.FC<FAQItemProps> = ({ question, answer }) => {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="pb-6 text-slate-600 leading-relaxed">
+            <div className="pb-5 text-slate-600 leading-relaxed">
               {answer}
             </div>
           </motion.div>
@@ -44,8 +44,8 @@ const FAQAccordionItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 };
 
 const FAQSection: React.FC<{ title: string; items: FAQItemProps[] }> = ({ title, items }) => (
-  <div className="mb-16 last:mb-0">
-    <h3 className="text-xl font-bold text-slate-400 uppercase tracking-widest mb-8 border-b border-slate-100 pb-4">
+  <div className="mb-14 last:mb-0">
+    <h3 className="text-xl font-bold text-slate-400 uppercase tracking-widest mb-6 border-b border-slate-100 pb-4">
       {title}
     </h3>
     <div className="bg-white rounded-3xl px-8 shadow-sm border border-slate-50">
@@ -181,9 +181,9 @@ export const FAQ = () => {
   })).filter(section => section.items.length > 0);
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-20 pb-16">
+    <div className="bg-slate-50 min-h-screen pt-16 pb-14">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -201,7 +201,7 @@ export const FAQ = () => {
           </motion.p>
         </div>
 
-        <div className="mb-12 relative">
+        <div className="mb-10 relative">
           <div className="relative">
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
             <input
@@ -214,7 +214,7 @@ export const FAQ = () => {
           </div>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-10">
           {filteredFaqData.map((section, index) => (
             <FAQSection key={index} title={section.title} items={section.items} />
           ))}
@@ -231,8 +231,8 @@ export const FAQ = () => {
           )}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-primary text-white p-12 rounded-[40px] shadow-2xl shadow-primary/20">
+        <div className="mt-14 text-center">
+          <div className="bg-primary text-white p-10 rounded-[40px] shadow-2xl shadow-primary/20">
             <h2 className="text-3xl font-bold mb-4">Still have questions?</h2>
             <p className="text-white/80 mb-10 max-w-lg mx-auto">
               We’re happy to help you understand how LotIQ works for your property.

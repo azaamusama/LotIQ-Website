@@ -20,7 +20,7 @@ const Accordion = ({ title, children, icon: Icon }: AccordionProps) => {
     <div className="border-b border-slate-100 last:border-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 flex items-center justify-between text-left group hover:text-primary transition-colors"
+        className="w-full py-5 flex items-center justify-between text-left group hover:text-primary transition-colors"
       >
         <div className="flex items-center gap-4">
           {Icon && (
@@ -47,7 +47,7 @@ const Accordion = ({ title, children, icon: Icon }: AccordionProps) => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="pb-8 text-slate-600 space-y-4 max-w-none px-12 text-sm leading-relaxed">
+            <div className="pb-6 text-slate-600 space-y-4 max-w-none px-12 text-sm leading-relaxed">
               {children}
             </div>
           </motion.div>
@@ -71,9 +71,9 @@ const HighlightBox = ({ title, children }: { title: string; children: React.Reac
 
 export const TermsPage = () => {
   return (
-    <div className="pt-20 pb-12 bg-white min-h-screen">
+    <div className="pt-16 pb-10 bg-white min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="py-12 lg:py-20 overflow-hidden border-b border-slate-50">
+      <section className="py-10 lg:py-18 overflow-hidden border-b border-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ export const TermsPage = () => {
       </section>
 
       {/* 2. QUICK SUMMARY */}
-      <section className="py-12 bg-slate-50/50">
+      <section className="py-10 bg-slate-50/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-8">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em]">Key things to know</h2>
@@ -128,7 +128,7 @@ export const TermsPage = () => {
       </section>
 
       {/* 3. STRUCTURE OVERVIEW */}
-      <section className="py-16">
+      <section className="py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">How these terms are organized</h2>
@@ -242,7 +242,7 @@ export const TermsPage = () => {
               <p>Users agree to indemnify LotIQ against claims arising from use of the platform, enforcement actions, or violations of law.</p>
             </Accordion>
 
-            <div className="pt-20 pb-8">
+            <div className="pt-16 pb-6">
               <h2 className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">Part B — Property Owners & Managers</h2>
             </div>
             
@@ -260,7 +260,7 @@ export const TermsPage = () => {
               <p>Automated actions are based on configured rules, may contain errors, and are ultimately the responsibility of the property owner.</p>
             </Accordion>
 
-            <div className="pt-20 pb-8">
+            <div className="pt-16 pb-6">
               <h2 className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">Part C — Towing Companies</h2>
             </div>
 
@@ -268,7 +268,7 @@ export const TermsPage = () => {
               <p>Towing companies operate independently, are not controlled by LotIQ, and must verify legality before towing.</p>
             </Accordion>
 
-            <div className="pt-20 pb-8">
+            <div className="pt-16 pb-6">
               <h2 className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">Part D — Permitted Vehicle Users</h2>
             </div>
 

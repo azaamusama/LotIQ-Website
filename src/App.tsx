@@ -63,9 +63,9 @@ export default function App() {
         </AnimatePresence>
 
         {/* Global Footer */}
-        <footer className="bg-slate-50 border-t border-slate-200 py-12 print:hidden">
+        <footer className="bg-slate-50 border-t border-slate-200 py-10 print:hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-4 gap-12 mb-12">
+            <div className="grid md:grid-cols-4 gap-12 mb-10">
               <div className="col-span-1 md:col-span-1">
                 <Logo textSize="text-lg" showSubtitle className="mb-6" />
                 <p className="text-sm text-slate-500 leading-relaxed">
@@ -106,7 +106,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-xs text-slate-400">© 2026 LotIQ. All rights reserved.</p>
               <div className="flex gap-8 text-xs text-slate-400">
                  <a 

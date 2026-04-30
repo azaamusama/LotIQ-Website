@@ -134,7 +134,7 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
   return (
     <>
       {/* Section 1: Hero */}
-      <section className="relative pt-24 pb-16 lg:pt-28 lg:pb-20 overflow-hidden bg-slate-50">
+      <section className="relative pt-20 pb-14 lg:pt-24 lg:pb-18 overflow-hidden bg-slate-50">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_45%_at_50%_40%,#0088FF0a,transparent)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -175,16 +175,16 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
       </section>
 
       {/* Section 3: Use Cases */}
-      <section id="use-cases" className="py-16 lg:py-24 bg-white">
+      <section id="use-cases" className="py-14 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-14">
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Use Cases</h2>
             <p className="text-xl text-slate-500 max-w-2xl mx-auto">
               Intelligence that works across every part of your property
             </p>
           </div>
           
-          <div className="space-y-20">
+          <div className="space-y-16">
             <UseCaseCard 
               title="Parking Enforcement"
               description="Automatically detect unauthorized vehicles and enforce parking rules without manual intervention. Tow requests are triggered instantly with full evidence."
@@ -216,7 +216,7 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
       </section>
 
       {/* Section 4: Value Proposition */}
-      <section id="features" className="py-16 lg:py-24 bg-slate-900 text-white overflow-hidden relative">
+      <section id="features" className="py-14 lg:py-20 bg-slate-900 text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/10 blur-[120px] -z-0" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-3xl lg:text-5xl font-bold mb-12 max-w-3xl leading-tight">
@@ -254,7 +254,7 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
       </section>
 
       {/* Section 5: How It Works */}
-      <section id="how-it-works" className="pt-16 pb-8 lg:pt-24 lg:pb-12 bg-white">
+      <section id="how-it-works" className="pt-14 pb-8 lg:pt-20 lg:pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">How It Works</h2>
@@ -279,11 +279,11 @@ export const HomePage = ({ onEnroll }: HomePageProps) => {
       </section>
 
       {/* Section 6: Pricing */}
-      <section id="pricing" className="pt-8 pb-20 lg:pt-12 lg:pb-28 bg-white relative overflow-hidden">
+      <section id="pricing" className="pt-6 pb-16 lg:pt-10 lg:pb-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 skew-x-[-12deg] translate-x-1/4 -z-10" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 lg:mb-20">
+          <div className="text-center mb-12 lg:mb-16">
             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4 block">Pricing Plans</span>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}

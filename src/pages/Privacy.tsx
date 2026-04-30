@@ -34,7 +34,7 @@ const Accordion = ({ title, children, icon: Icon }: AccordionProps) => {
     <div className="border-b border-slate-100 last:border-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 flex items-center justify-between text-left group hover:text-primary transition-colors focus:outline-none"
+        className="w-full py-5 flex items-center justify-between text-left group hover:text-primary transition-colors focus:outline-none"
       >
         <div className="flex items-center gap-4">
           {Icon && (
@@ -61,7 +61,7 @@ const Accordion = ({ title, children, icon: Icon }: AccordionProps) => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="pb-8 text-slate-600 space-y-4 max-w-none px-12 text-sm leading-relaxed">
+            <div className="pb-6 text-slate-600 space-y-4 max-w-none px-12 text-sm leading-relaxed">
               {children}
             </div>
           </motion.div>
@@ -85,9 +85,9 @@ const HighlightBox = ({ title, children }: { title?: string; children: React.Rea
 
 export const PrivacyPolicyPage = () => {
   return (
-    <div className="pt-20 pb-12 bg-white min-h-screen">
+    <div className="pt-16 pb-10 bg-white min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="py-12 lg:py-20 overflow-hidden border-b border-slate-50">
+      <section className="py-10 lg:py-18 overflow-hidden border-b border-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -117,7 +117,7 @@ export const PrivacyPolicyPage = () => {
       </section>
 
       {/* 2. QUICK SUMMARY */}
-      <section className="py-12 bg-slate-50/50">
+      <section className="py-10 bg-slate-50/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-10">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] text-center">Key things to know</h2>
@@ -143,7 +143,7 @@ export const PrivacyPolicyPage = () => {
       </section>
 
       {/* DETAILED SECTIONS */}
-      <section className="py-16">
+      <section className="py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             <Accordion title="Service provider role" icon={Info}>
